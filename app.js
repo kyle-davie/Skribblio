@@ -1,5 +1,9 @@
 import wordCount from './words.js';
 
+document.querySelector('.fontIcon').addEventListener('click', () => {
+    document.querySelector(".popup").style.display = "none";
+});
+
 document.querySelectorAll('.box input').forEach((input, index, inputs) => {
     input.addEventListener('input', () => {
         if (input.value.length === 1 && index < inputs.length - 1) {
@@ -70,7 +74,6 @@ function updatePossibleWords() {
     } else {
         highestProbability.value = possibleWords.join('\n');
     }
-    console.log('Possible words:', possibleWords); // For debugging purposes
 }
 
 
